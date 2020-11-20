@@ -1,0 +1,107 @@
+<div class="animate__animated animate__fadeIn">
+
+    <app-title-options titulo="Pruebas-Usuarios"></app-title-options>
+
+    <div class="container">
+        <!-- SELECCIONAR FOTO Y SUBIR FOTO -->
+        <h2 class="text-center">Imagen</h2>
+        <div class="input-group col-sm-7 mx-auto">
+            <div class="custom-file">
+                <input (change)="seleccionarFoto( $event )" type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                <div class="">
+                    <label class="custom-file-label text-center" for="inputGroupFile04">Seleccionar Foto</label>
+                </div>
+                <!-- <div class="" *ngIf="!contratistasDocumentosImagenes?.imagen">
+                    <label class="custom-file-label text-center" for="inputGroupFile04">{{fotoSeleccionada.name}}</label>
+                    <img src="http://localhost:8086/egovi-api/imagenes/upload/img/{{contratistasDocumentosImagenes.imagen}}" class="img-thumbnail rounded" style="position: fixed; width: 400px; height: 400px;">
+                </div> -->
+            </div>
+            <div class="">
+                <button [disabled]="!fotoSeleccionada" (click)="subirFotoSeleccionada()" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Subir Foto</button>
+            </div>
+
+            <!-- BARRA DE PROGRESO -->
+            <div class="progress" *ngIf="progreso > 0" style="height: 30px;">
+                <div class="progress-bar progress-bar-striped" role="progressbar" [ngStyle]="{width: progreso+'%'}" attr.aria-valuenow="{{progreso}}" aria-valuemin="0" aria-valuemax="100">
+                    {{progreso}}%
+                </div>
+            </div>
+
+            <!-- <img src="http://localhost:8086/egovi-api/uploads/img/" alt="Foto del cliente" class="img-thumbnail rounded" /> -->
+
+
+        </div>
+
+
+        <!-- <div class="">
+            <p>Imagen seleccionada</p>
+            <img src="assets/images/ValleHermoso/logo_ValleHermoso.png">
+
+            <div class="col-sm mx-auto d-block">
+                 
+                 <img src="http://localhost:8080/api/uploads/img/{{cliente.foto}}" alt="Foto del cliente, {{cliente.foto}}" class="img-thumbnail rounded" /> 
+            </div>
+        </div> -->
+
+        <br>
+
+        <h4 class="text-center">Tabla de Usuario por id</h4>
+        <table class="table table-bordered table-striped bg-white" *ngFor="let user of usuario">
+            <thead>
+                <tr class="text-center">
+                    <th>Clave</th>
+                    <th>Nombre</th>
+                    <th>Password</th>
+                    <th>Suspendido</th>
+                    <th>Telefonos</th>
+                    <th>Email</th>
+                    <th>Email_Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td>{{user.clave}}</td>
+                    <td>{{user.nombre}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.suspendido}}</td>
+                    <td>{{user.telefonos}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.emailPassword}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <h4 class="text-center">Tabla de Usuarios</h4>
+        <table class="table table-bordered table-striped bg-dark">
+            <thead>
+                <tr class="text-center text-white">
+                    <th>Clave</th>
+                    <th>Nombre</th>
+                    <th>Password</th>
+                    <th>Suspendido</th>
+                    <th>Telefonos</th>
+                    <th>Email</th>
+                    <th>Email_Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center text-white" *ngFor="let users of usuarios">
+                    <td>{{users.clave}}</td>
+                    <td>{{users.nombre}}</td>
+                    <td>{{users.password}}</td>
+                    <td>{{users.suspendido}}</td>
+                    <td>{{users.telefonos}}</td>
+                    <td>{{users.email}}</td>
+                    <td>{{users.emailPassword}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <app-button-footer></app-button-footer>
+
+</div>

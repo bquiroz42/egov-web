@@ -1,0 +1,42 @@
+<div class="animate__animated animate__fadeIn">
+
+    <app-title-options titulo="Lista de resultados"></app-title-options>
+
+    <!-- LISTA DE RESULTADOS DE LA BÚSQUEDA -->
+    <div class="mb-4 mt-3 info-contratista mx-auto d-block" *ngFor="let contratista of contratistas">
+        <div class="bg-white row" style="border-radius: 20px;">
+            <img src="assets/images/main/obras_img.png" alt="Tipo de busqueda" title="Obra" class="imagen-tipo">
+            <div class="row ml-3 mt-2 mb-3">
+                <ul class="list-unstyled">
+                    <a (click)="verDocumentos()">
+                        <div>
+                            <i class="fa fa-user-circle text-valle-verde" aria-hidden="true"></i>
+                            <label class="ml-1 info-text text-break">
+                                {{ contratista.conNombre }}
+                            </label>
+
+                            <br>
+
+                            <label class="ml-1 info-text">
+                                {{ contratista.clasificacion }}
+                            </label>
+
+                            <br>
+
+                            <i class="fa fa-money text-valle-verde"></i>
+                            <label class="ml-1 mr-3 info-text">
+                                {{ contratista.creadofecha | date: 'dd/MM/yyyy'}}
+                            </label>
+
+                            <i class="fa fa-calendar text-valle-verde" aria-hidden="true"></i>
+                            <label class="ml-1 info-text">
+                                {{ contratista.creadofecha | date: 'dd/MM/yyyy'}}
+                            </label>
+
+                        </div>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

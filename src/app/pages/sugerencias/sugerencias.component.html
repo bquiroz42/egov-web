@@ -1,0 +1,24 @@
+<div class="animate__animated animate__fadeIn">
+
+    <app-title-options titulo="Sugerencias"></app-title-options>
+
+    <!-- SUGERENCIAS FORM -->
+    <form [formGroup]="sugerenciasForm" (ngSubmit)="enviarSugerencia()">
+        <div class="container mt-5">
+            <h3 class="font-weight-bold">Asunto</h3>
+            <textarea placeholder="Escribe algun asunto..." class="input-message" formControlName="asunto"></textarea>
+            <hr>
+            <h3 class="font-weight-bold">Sugerencia</h3>
+
+            <textarea placeholder="Escribe alguna sugerencia..." class="input-message" formControlName="sugerencia"></textarea>
+
+            <br/>
+
+            <button [ngClass]="sugerenciasForm.invalid  ? 'invalid' : 'valid' " [disabled]="sugerenciasForm.invalid" type="submit" class="font-weight-bold btn bg-valle-verde btn-responsive out-line mt-3 p-2">Enviar Sugerencias</button>
+            <label *ngIf="sugerenciasForm.invalid" class="animate__animated animate__fadeInUp bg-valle-celeste text-white border-0 mensajeAviso p-2">Escribe algún asunto y sugerencia para enviar</label>
+            <label *ngIf="sugerenciasForm.valid" class="animate__animated animate__fadeOutDown bg-valle-celeste text-white border-0 mensajeAviso p-2">¡Datos introducidos!</label>
+        </div>
+    </form>
+
+    <app-button-footer></app-button-footer>
+</div>

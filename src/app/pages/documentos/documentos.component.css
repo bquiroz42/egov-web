@@ -1,0 +1,23 @@
+.documentos-hover {
+    transition: 0.2s all linear;
+    color: black;
+}
+
+.documentos-hover:hover {
+    background: #ccc;
+    color: white;
+}
+
+.documentos-size {
+    height: 50px;
+    margin-left: 30%;
+    width: 50% !important;
+}
+
+.purple {
+    background: purple;
+}
+
+.green {
+    background: green;
+}

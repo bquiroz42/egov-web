@@ -1,0 +1,29 @@
+export interface Contrato {
+    id: number;
+    area: string;
+    tipo: string;
+    categoria: string;
+    folio: number;
+    contrato: string;
+    ubicacion: string;
+    notas: string;
+    estatus: string;
+    revision: number;
+    bloqueado: string;
+    conNumero: string;
+    conNombre: string;
+    conRfc: string;
+    conPersona: string;
+    conRegistro: string;
+    conPadron: number;
+    conRepresentante: string;
+    conContacto: string;
+    conDomicilio: string;
+    conTelefonos: string;
+    conGiro: string;
+    conEmail: string;
+    conNotas: string;
+    completo: boolean;
+    cancelado: boolean;
+    creadousuario: boolean;
+}

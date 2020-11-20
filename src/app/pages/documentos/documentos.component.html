@@ -1,0 +1,137 @@
+<div class="animate__animated animate__fadeIn">
+
+    <app-title-options titulo="Documentos"></app-title-options>
+
+    <div class="container">
+        <div class="card mt-2">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-4">
+                        Monto
+                    </div>
+                    <div class="col-4">
+                        <i class="fa fa-money"></i>
+                    </div>
+                    <div class="col-4">$ {{money}}</div>
+                </div>
+
+                <hr class="ml-3 mr-3">
+
+                <div class="row">
+                    <div class="col-4">
+                        Fecha
+                    </div>
+                    <div class="col-4">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <div class="col-4">{{date}}</div>
+                </div>
+
+                <hr class="ml-3 mr-3">
+
+                <div class="row">
+                    <div class="col-8">
+                        Rep. Legal
+                    </div>
+                    <div class="col-4">
+                        <p id="rep" *ngFor="let rep of repLegal">{{ rep.nombre }}</p>
+                    </div>
+                </div>
+
+                <hr class="ml-3 mr-3">
+
+                <div class="row">
+                    <div class="col-8">
+                        Socios
+                    </div>
+                    <div class="col-4"><label *ngFor="let socio of socios">{{ socio.nombre }}</label></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-4">
+                        Estatus
+                    </div>
+                    <div class="col-4">
+                        <i class="fa fa-money"></i>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-white p-2" style="width: 35%;" [ngClass]="contrato  ? 'purple' : ' green'">EN REVISION</p>
+                    </div>
+                </div>
+
+                <hr class="ml-3 mr-3">
+
+                <div class="row">
+                    <div class="col-8">
+                        Seguimiento
+                    </div>
+                    <div class="col-4">
+                        <button (click)="verSeguimiento()">Ver seguimiento</button>
+                    </div>
+                </div>
+
+
+                <hr class="ml-3 mr-3">
+
+                <div class="row">
+                    <div class="col-8">
+                        Responsable
+                    </div>
+                    <div class="col-4"><label>{{ responsable }}</label></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card mt-2 mb-3">
+            <div class="card-body">
+                <h4>Documentos</h4>
+                <div class="row row-cols-2">
+
+                    <div class="col">
+                        <button (click)="abrirFichaTecnica()" class="documentos-hover documentos-size">
+                        <i class="fa fa-file-pdf-o text-purple mr-3"></i>
+                        <label  class="text-uppercase font-weight-bold text-center cursor-pointer">
+                            Ficha Técnica
+                        </label>
+                      </button>
+                    </div>
+                    <div class="col">
+                        <button (click)="abrirDocumentosPadron()" class="documentos-hover documentos-size">
+                        <i class="fa fa-file-pdf-o text-purple mr-3"></i>
+                        <label  class="text-uppercase font-weight-bold text-center cursor-pointer">
+                            Documentos Padron
+                        </label>
+                    </button>
+                    </div>
+                    <div class="col">
+                        <button (click)="abrirAnexosOficiales()" class="documentos-hover documentos-size">
+                        <i class="fa fa-file-pdf-o text-purple mr-3"></i>
+                        <label  class="text-uppercase font-weight-bold text-center cursor-pointer">
+                            Anexos Oficiales
+                        </label>
+                      </button>
+                    </div>
+                    <div class="col">
+                        <button (click)="abrirContratosAnexos()" class="documentos-hover documentos-size">
+                        <i class="fa fa-file-pdf-o text-purple mr-3"></i>
+                        <label  class="text-uppercase font-weight-bold text-center cursor-pointer">
+                            Contratos y Anexos
+                        </label>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+    <code>&lt;!DOCTYPE HTML&gt;</code> -->
+
+    <app-button-footer></app-button-footer>

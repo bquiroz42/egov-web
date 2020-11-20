@@ -1,0 +1,93 @@
+<div class="animate__animated animate__fadeIn">
+
+    <app-title-options titulo="Filtros"></app-title-options>
+
+    <img src="assets/images/ValleHermoso/logo_ValleHermoso.png" class="mx-auto d-block" style="width: 6rem;">
+
+    <!-- OPCIONES BÚSQUEDA -->
+    <section class="mx-auto d-block">
+
+        <div class="row text-center">
+            <div class="col">
+                <mat-checkbox class="checkbox-position" value="blue">Contratistas</mat-checkbox>
+                <mat-checkbox class="checkbox-position">Socio</mat-checkbox>
+                <mat-checkbox class="checkbox-position">Contratos</mat-checkbox>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <mat-checkbox class="checkbox-position">Rep. Legal</mat-checkbox>
+                <mat-checkbox class="checkbox-position ml-3">Descripción</mat-checkbox>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- FECHAS -->
+    <h3 class="text-center mt-3">Fechas</h3>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center ml-2">
+
+            <label class="font-weight-bold">Inicio</label>
+            <input matInput [matDatepicker]="Inicio" class="form-control ml-3" placeholder="Dia/Mes/Año">
+            <mat-datepicker-toggle matSuffix [for]="Inicio"></mat-datepicker-toggle>
+            <mat-datepicker #Inicio></mat-datepicker>
+
+            <label class="font-weight-bold">Fin</label>
+            <input matInput [matDatepicker]="Fin" class="form-control ml-3" placeholder="Dia/Mes/Año">
+            <mat-datepicker-toggle matSuffix [for]="Fin"></mat-datepicker-toggle>
+            <mat-datepicker #Fin></mat-datepicker>
+
+        </div>
+    </div>
+
+    <!-- MONTOS -->
+
+    <div class="mx-auto mt-3">
+        <h3 class="text-center">Monto</h3>
+        <p class="text-center">Rango de Intervalo minimo: {{valorMinimo | currency}}</p>
+        <p class="text-center">Rango de Intervalo maximo: {{valorMaximo | currency}}</p>
+
+        <!-- RANGOS -->
+        <div class="d-flex justify-content-center">
+            <!-- <label class="pl-2">Min</label>
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="10000" min="0" max="1000000" [(ngModel)]="valorMinimo"></mat-slider>
+
+            <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="10000" min="1" max="1000000" [(ngModel)]="valorMaximo"></mat-slider>
+            <label class="pr-2">Max</label> -->
+
+            <input type="range" class="w-25" [(ngModel)]="valorMinimo" max="1000000" />
+            <input type="range" class="w-25" [(ngModel)]="valorMaximo" max="1000000" />
+        </div>
+
+
+
+    </div>
+
+    <!-- ORGANIZAR -->
+    <h3 class="text-center">Organizar</h3>
+
+
+    <div class="d-flex justify-content-center" style="margin-bottom: 100px;">
+
+        <p class="mr-3">Buscar conforme a filtros seleccionados</p>
+
+        <select name="montosRangos" class="mr-3 opcion-seleccionada form-control dropdown-toggle">
+            <option value="montoMayorMenor" class="dropdown-item">
+                Monto mayor a menor
+            </option>
+            <option value="montoMayorMenor" class="dropdown-item">
+                Monto menor a mayor
+            </option>
+        </select>
+
+        <button class="btn bg-valle-verde text-white btn-responsive" (click)="activarFiltros()">
+            Filtrar
+        </button>
+
+    </div>
+
+    <app-button-footer></app-button-footer>
+</div>

@@ -1,0 +1,38 @@
+/* Footer tabs */
+
+.tab-hover {
+    transition: 0.5s all linear;
+}
+
+.tab-hover:hover {
+    background: rgba(160, 195, 13, 0.6);
+}
+
+.img-seccion {
+    height: 1.8rem;
+}
+
+.font-seccion {
+    font-size: 1rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .img-seccion {
+        height: 1.8rem;
+    }
+    .font-seccion {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .img-seccion {
+        height: 1.5rem;
+    }
+    .font-seccion {
+        font-size: 0.8rem;
+    }
+}

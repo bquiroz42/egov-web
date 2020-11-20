@@ -1,0 +1,17 @@
+<!-- BARRA DE BÚSQUEDA -->
+<input type="search" placeholder={{titulo}} class="bg-celeste rounded text-center input-search" spellcheck="false" (keyup)="buscar( $event )">
+
+<!-- RESULTADO DE LA BÚSQUEDA -->
+<div *ngIf="textoBuscar" class="resultado">
+    <div *ngFor="let contratista of contratistas">
+        <div class="bg-white row mx-auto">
+            <ul class="list-unstyled">
+                <a (click)="verListaDocumentos()" class="text-primary">
+                    <li class="container">
+                        <i class="fa fa-user-circle text-purple mr-2" aria-hidden="true"></i> {{contratista.nombre}}:C
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>

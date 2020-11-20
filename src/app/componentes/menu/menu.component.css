@@ -1,0 +1,103 @@
+/* TITULO PRINCIPAL */
+
+.first-title {
+    font-size: 2rem;
+    font-family: Arial;
+}
+
+
+/* BOTON VALLE HERMOSO */
+
+.button-sidemenu {
+    background: rgb(160, 195, 13);
+}
+
+.empresa {
+    width: 5rem;
+    border-radius: 20%;
+}
+
+
+/* BARRA DE BÚSQUEDA */
+
+input {
+    transition: 0.3s all linear;
+    border: 2px solid #4c2866;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    border: 4px solid #CDC5D4;
+}
+
+
+/* BOTÓN DE FILTROS */
+
+.posicion-filtros {
+    margin-top: 20px;
+}
+
+.filter {
+    height: 2rem;
+    width: 3rem;
+    outline: none;
+    text-align: center;
+    transform: rotate(90deg);
+}
+
+
+/* MENU - OPCIÓN SELECCIONADA */
+
+.menu-options {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 12rem;
+    height: 100%;
+}
+
+.option-hover,
+a {
+    transition: 0.2s all linear;
+    color: black;
+}
+
+.option-hover:hover,
+a:hover {
+    background: rgba(4, 85, 151, 0.8);
+    color: white;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .first-title {
+        font-size: 1.5rem;
+    }
+    .empresa {
+        width: 4rem;
+    }
+    /* BOTÓN FILTROS */
+    .posicion-filtros {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .first-title {
+        font-size: 1rem;
+    }
+    .empresa {
+        width: 3rem;
+    }
+    /* BOTÓN FILTROS */
+    .posicion-filtros {
+        margin-top: 05px;
+    }
+    .filter {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

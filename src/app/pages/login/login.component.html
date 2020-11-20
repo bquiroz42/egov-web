@@ -1,0 +1,52 @@
+<div class="container mt-5 animate__animated animate__fadeIn">
+
+    <div class="d-flex justify-content-center">
+        <img src="assets/images/ValleHermoso/logo_valleHermoso_horizontal.jpg" class="img-nl" style="border-radius: 10px;">
+    </div>
+
+    <div class="input-info mt-5">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+            <!-- CAMPO USUARIO -->
+            <div class="input-group d-flex justify-content-center mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-valle-verde">
+                        <i class="fa fa-user text-white"></i>
+                    </span>
+                </div>
+                <input type="text" class="input-hover input-login" placeholder="Usuario" formControlName="usuario" required>
+                <div class="input-group-prepend" *ngIf="loginForm.get('usuario').valid">
+                    <span class="input-group-text bg-valle-verde">
+                        <i class="fa fa-check text-white"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- CAMPO CONTRASEÑA -->
+            <div class="input-group d-flex justify-content-center mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-valle-verde">
+                        <i class="fa fa-lock text-white" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <input type="password" class="input-hover input-login" placeholder="Contraseña" formControlName="contraseña" required>
+
+                <div class="input-group-prepend" *ngIf="loginForm.get('contraseña').valid">
+                    <span class="input-group-text bg-valle-verde"><i class="fa fa-check text-white"></i></span>
+                </div>
+
+            </div>
+
+            <!-- BOTON PARA INGRESAR AL SISTEMA 'DEBE VALIDAR LAS CREDENCIALES DEL USUARIO' -->
+            <div class="mx-auto d-flex justify-content-center">
+                <input type="submit" value="Entrar" [ngClass]="loginForm.invalid  ? 'cursor-invalid' : 'cursor-pointer' " [disabled]="loginForm.invalid" class="bg-valle-celeste text-white button-submit">
+            </div>
+        </form>
+
+        <div *ngIf="loginForm.invalid" class="animate__animated animate__bounce d-flex justify-content-center mt-3">
+            <p class="mensaje-aviso">
+                Bienvenido, escribe tu usuario y contraseña para ingresar
+            </p>
+        </div>
+    </div>
+</div>

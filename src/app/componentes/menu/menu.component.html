@@ -1,0 +1,56 @@
+<!-- Header -->
+<nav class="bg-valle-verde">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="text-white text-uppercase text-center first-title">{{tituloHeader}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2 text-center">
+            <button class="button-sidemenu mb-2" (click)="openMenu()">
+                    <img src="assets/images/ValleHermoso/logo_ValleHermoso.png" class="empresa">
+                </button>
+        </div>
+
+        <div class="col-8  text-center">
+            <app-searchbar titulo="Busqueda general"></app-searchbar>
+        </div>
+
+        <div class="col-2 text-center">
+            <button class="rounded-circle bg-valle-celeste posicion-filtros" (click)="abrirFiltros()">
+                        <i class="fa fa-sliders filter text-white pt-1" aria-hidden="true"></i>
+            </button>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Menu Options -->
+
+<div *ngIf="mostrarMenu == true">
+    <div class="bg-white menu-options animate__animated animate__fadeInLeft menu-options pos-fixed">
+        <div>
+            <div class="bg-valle-verde container">
+                <img src="assets/images/ValleHermoso/logo_valleHermoso.jpg" class="w-50 mt-3">
+
+                <button class=" rounded button-back float-right" (click)="closeMenu()" style="margin-top: 50%;">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+
+                <h4 class="text-white">{{usuario.rol}}</h4>
+                <span class="text-white">{{usuario.correo}}</span>
+            </div>
+
+            <nav>
+                <div *ngFor="let option of options">
+                    <ul class="list-unstyled mt-3 pl-4 option-hover">
+                        <a [routerLink]="option.ruta" style="text-decoration-line: none;">
+                            <li><i [class]="option.icono" class="mr-2"></i>{{option.nombre}}</li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

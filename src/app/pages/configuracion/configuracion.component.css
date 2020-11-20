@@ -1,0 +1,38 @@
+.list-size {
+    max-height: 200px;
+    min-height: 65px;
+    width: 80%;
+}
+
+.font-opcion {
+    font-size: 1rem;
+}
+
+.button-size {
+    max-width: 20%;
+    min-width: 10%;
+    margin-left: 52%;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .button-size {
+        min-width: 15%;
+        margin-left: 52%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .font-opcion {
+        font-size: 0.8rem
+    }
+    .list-size {
+        height: 68px;
+    }
+    .button-size {
+        min-width: 35%;
+        margin-left: 54%;
+    }
+}

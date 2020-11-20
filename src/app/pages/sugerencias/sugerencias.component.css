@@ -1,0 +1,37 @@
+textarea,
+.out-line {
+    outline: none;
+    border: 2px solid #CDC5D4;
+}
+
+.pointer {
+    cursor: pointer
+}
+
+.invalid {
+    cursor: not-allowed;
+}
+
+.mensajeAviso {
+    border-radius: 10px;
+    text-align: center;
+    width: 35%;
+    margin-top: 50px !important;
+    display: block;
+    margin: auto;
+}
+
+.input-message {
+    width: 80%;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .mensajeAviso {
+        width: 70%;
+        margin-top: 50px !important;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .mensajeAviso {}
+}

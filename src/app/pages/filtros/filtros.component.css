@@ -1,0 +1,49 @@
+body {
+    background: white !important;
+}
+
+.calendar:focus {
+    outline: none;
+}
+
+
+/* mat-checkbox {
+    background: blue;
+} */
+
+mat-slider {
+    width: 300px;
+}
+
+mat-select {
+    color: blue;
+}
+
+mat-option {
+    color: blue;
+}
+
+.checkbox-position {
+    margin: 0 9px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 4px;
+}
+
+.opcion-seleccionada {
+    width: 16%;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .opcion-Seleccionada {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .opcion-Seleccionada {
+        width: 50%;
+    }
+}

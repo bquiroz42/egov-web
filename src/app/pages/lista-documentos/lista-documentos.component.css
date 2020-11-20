@@ -1,0 +1,32 @@
+.imagen-tipo {
+    height: 4rem;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.info-text {
+    font-size: 1em;
+}
+
+.info-contratista {
+    width: 50%;
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    .info-contratista {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .info-contratista {
+        width: 80%;
+    }
+    .imagen-tipo {
+        height: 4rem;
+        margin-left: 40%;
+    }
+    .info-text {
+        font-size: 0.8em;
+    }
+}

@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+.fondo {
+    /* background: rgb(157, 157, 157);
+    background: linear-gradient(90deg, rgba(157, 157, 157, 1) 0%, rgba(230, 230, 230, 1) 100%); */
+    background: rgb(110, 110, 110);
+    background: linear-gradient(90deg, rgba(110, 110, 110, 1) 0%, rgba(236, 236, 236, 1) 50%, rgba(110, 110, 110, 1) 100%);
+}
+
+.bg-valle-verde {
+    background: rgb(160, 195, 13);
+}
+
+.bg-valle-celeste {
+    background: rgb(69, 170, 226);
+}
+
+.bg-valle-azul {
+    background: rgb(4, 85, 151);
+}
+
+.text-valle-verde {
+    color: rgb(160, 195, 13);
+}
+
+.button-back,
+.arrow-purple {
+    transition: 0.3s all linear;
+    background: rgb(160, 195, 13);
+    color: white;
+}
+
+.button-back:hover,
+.arrow-purple:hover {
+    background: white;
+    color: black;
+}
+
+.fa-sliders {
+    transform: rotate(90deg);
+}
+
+
+/* BUTTON-FOOTER  */
+
+#footer-return {
+    position: fixed;
+    bottom: 0px;
+    overflow-x: hidden;
+    height: 8%;
+}
+
+.button-footer {
+    width: 5%;
+    height: 35px;
+    margin-left: 93%;
+    margin-bottom: 5px;
+}
+
+
+/* TOOLS */
+
+button {
+    outline: none;
+    border: 1px transparent;
+}
+
+button:focus {
+    outline: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default
+}
+
+.cursor-invalid {
+    cursor: not-allowed;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+.no-border {
+    border: 0px solid transparent;
+}
+
+.out-none:focus {
+    outline: none;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/* MEDIA QUERYS*/
+
+.img-responsive-size {
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+}
+
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}

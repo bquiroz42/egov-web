@@ -1,0 +1,33 @@
+<div class="animate__animated animate__fadeIn">
+
+    <app-title-options titulo="Configuraciones"></app-title-options>
+
+    <!-- FORMULARIO / OPCIONES PARA CONFIGURAR EL SISTEMA -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-6">
+                <ul class="list-unstyled">
+                    <li class="list-group-item" *ngFor="let opcion of opciones;">
+                        <p class="font-weight-bold font-opcion">{{ opcion }}</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <ul class="list-unstyled">
+                    <li class="list-group-item list-size" *ngFor="let numero of numeros;">
+                        <input type="number" min="0" class="no-border out-none w-100" [placeholder]="numero">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- APLICAR CAMBIOS DE LA CONFIGURACION -->
+    <button class="btn bg-valle-azul text-white button-size btn-responsive" (click)="configurarSistema()">
+        Aplicar cambios
+    </button>
+
+    <app-button-footer></app-button-footer>
+</div>

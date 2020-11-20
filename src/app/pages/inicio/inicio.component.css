@@ -1,0 +1,24 @@
+.logo-horizontal {
+    margin-top: 1rem;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.logo-centro {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.img-size {
+    width: 16rem;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .img-size {
+        width: 16rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .img-size {
+        width: 15rem;
+    }
+}

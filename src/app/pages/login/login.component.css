@@ -1,0 +1,49 @@
+.input-login {
+    border: 1px white solid;
+    border-radius: 0px 5px 5px 0px;
+    width: 20%;
+    transition: 0.5s all linear;
+}
+
+.input-login:focus {
+    outline: none;
+    background: rgb(241, 241, 241);
+}
+
+.button-submit {
+    width: 6rem;
+    border-radius: 10px;
+}
+
+.img-nl {
+    width: 40%;
+    border: 2px solid #ccc;
+}
+
+.mensaje-aviso {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .input-login {
+        width: 35%;
+    }
+    .mensaje-aviso {
+        font-size: 15px;
+    }
+    .img-nl {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .img-nl {
+        width: 80%;
+    }
+    .input-login {
+        width: 35%;
+    }
+    .mensaje-aviso {
+        font-size: 14px;
+    }
+}

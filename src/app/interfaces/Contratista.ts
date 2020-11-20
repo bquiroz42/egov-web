@@ -1,0 +1,29 @@
+export interface Contratista {
+    id: number;
+    numero: number;
+    persona: number;
+    nombregenero: string;
+    nombre: string;
+    rfc: string;
+    registro: number;
+    padron: string;
+    calle: string;
+    numext: string;
+    numint: string;
+    edificio: string;
+    colonia: string;
+    pais: number;
+    estado: number;
+    ciudad: number;
+    codpos: string;
+    contacto: string;
+    telefonos: string;
+    email: string;
+    web: string;
+    notas: string;
+    estatus: number;
+    bloqueado: string;
+    suspendido: boolean;
+    completo: boolean;
+    creadousuario: boolean;
+}
